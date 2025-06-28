@@ -12,8 +12,8 @@ class Initialize:
         os.makedirs(input_dir, exist_ok=True)
         output_dir = "output"
         os.makedirs(output_dir, exist_ok=True)
-        if not os.path.exists("input/data.csv"):
-            raise FileNotFoundError("File 'input/data.csv' not found.")
+        if not os.path.exists("input/data.csv") | os.path.exists("input/differential.json"):
+            raise FileNotFoundError("Required file not found.")
 
         data = pd.read_csv("input/data.csv")
         train = Train(data)
