@@ -30,5 +30,6 @@ class Train:
         x = np.stack(merged_df["embedding"].values)
         y = merged_df["btc_diff"].values
 
+        #test
         return [x, y]
 
